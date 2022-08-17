@@ -22,3 +22,20 @@ function activating() {
     this.classList.add('active');
 }
 
+
+// typing effects
+let typingEffect = (teks, i, teks_temp, timer) => {
+    setTimeout(() => {
+        document.getElementById("greet").innerHTML=teks_temp;
+        console.log(teks_temp);
+        if (teks_temp.length != teks.length) {
+            teks_temp += teks.charAt(i++);
+            typingEffect(teks, i, teks_temp, timer);
+        }
+    }, timer);
+}
+
+
+window.onload = function() {
+    typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 70);
+};
