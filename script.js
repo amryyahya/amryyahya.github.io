@@ -19,8 +19,8 @@ let typingEffect = (teks, i, teks_temp, timer) => {
 
 // process image
 let addImage = async () => {
-    let educationImage = ['sd.jpg','smp.jpg','sma.jpeg','kuliah.webp'];
-    let educationId= ['sd','smp','sma','kuliah'];
+    let educationImage = ['sd.jpg','smp.jpg','sma.jpeg','kuliah.webp','movie-search.png','resepin.png'];
+    let educationId= ['sd','smp','sma','kuliah','movie-search','resepin'];
     for (let i=0;i<educationImage.length;i++){
         document.getElementById(educationId[i]).src="resources/"+educationImage[i];
     }
