@@ -3,7 +3,27 @@ let sections = [...document.querySelectorAll('section')];
 let first_section = document.location.href.split('#')[1];
 navs.map(nav => change(nav));
 
-starting(first_section);
+// typing effects
+let typingEffect = (teks, i, teks_temp, timer) => {
+    setTimeout(() => {
+        let element=document.getElementById("greet");
+        element.innerHTML=teks_temp;
+        //curseor effect
+        if (teks_temp!=teks)element.textContent+="|";
+        console.log(teks_temp);
+        if (teks_temp.length != teks.length) {
+            teks_temp += teks.charAt(i++);
+            typingEffect(teks, i, teks_temp, timer);
+        }
+    }, timer);
+}
+
+
+window.onload = function() {
+    typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 70);
+    starting(first_section);
+};
+
 
 function starting(first_section) {
     let current_section = document.querySelector(`[data-link=${first_section}]`)
@@ -23,19 +43,3 @@ function activating() {
 }
 
 
-// typing effects
-let typingEffect = (teks, i, teks_temp, timer) => {
-    setTimeout(() => {
-        document.getElementById("greet").innerHTML=teks_temp;
-        console.log(teks_temp);
-        if (teks_temp.length != teks.length) {
-            teks_temp += teks.charAt(i++);
-            typingEffect(teks, i, teks_temp, timer);
-        }
-    }, timer);
-}
-
-
-window.onload = function() {
-    typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 70);
-};
