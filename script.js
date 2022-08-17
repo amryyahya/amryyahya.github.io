@@ -10,7 +10,6 @@ let typingEffect = (teks, i, teks_temp, timer) => {
         element.innerHTML=teks_temp;
         //curseor effect
         if (teks_temp!=teks)element.textContent+="|";
-        console.log(teks_temp);
         if (teks_temp.length != teks.length) {
             teks_temp += teks.charAt(i++);
             typingEffect(teks, i, teks_temp, timer);
@@ -18,10 +17,20 @@ let typingEffect = (teks, i, teks_temp, timer) => {
     }, timer);
 }
 
+// process image
+let addImage = async () => {
+    let educationImage = ['sd.jpg','smp.jpg','sma.jpeg','kuliah.webp'];
+    let educationId= ['sd','smp','sma','kuliah'];
+    for (let i=0;i<educationImage.length;i++){
+        document.getElementById(educationId[i]).src="resources/"+educationImage[i];
+    }
+}
+
 
 window.onload = function() {
     typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 70);
     starting(first_section);
+    addImage();
 };
 
 
