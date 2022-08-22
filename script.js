@@ -28,7 +28,7 @@ let addImage = async () => {
 
 
 window.onload = function() {
-    typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 70);
+    typingEffect("Hello There, my name is Amry Yahya, I am a student of Informatics Engineering at University of Brawijaya. Thanks for visiting my portfolio website :)", 0, "", 50);
     addImage();
     starting(first_section);
 };
