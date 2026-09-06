@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================================================
-    // 5. DevOps Interactive Terminal Mockup typing simulation
+    // 5. Adventurer's Scroll - Interactive RPG character sheet typing simulation
     // ==========================================================================
     const terminalBody = document.getElementById('terminal-body');
 
@@ -108,16 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
         terminalBody.innerHTML = ''; // Clear noscript fallback
 
         const terminalScript = [
-            { type: 'input', text: 'whoami' },
-            { type: 'output', text: '<span class="highlight-val">amryyahya</span> - DevOps & Cloud Infrastructure Architect' },
+            { type: 'input', text: 'inspect self' },
+            { type: 'output', text: '<span class="highlight-val">amryyahya</span> — Level 99 DevOps & Cloud Infrastructure Architect' },
             { type: 'wait', ms: 500 },
             
-            { type: 'input', text: 'cat stats.yaml' },
-            { type: 'output', text: `---<br><span class="highlight-val">engineer:</span><br>&nbsp;&nbsp;name: Amry Yahya<br>&nbsp;&nbsp;role: DevOps Engineer<br>&nbsp;&nbsp;location: Yogyakarta, Indonesia<br><span class="highlight-val">key_impact:</span><br>&nbsp;&nbsp;ansible_automation: <span class="success-val">"Server setup time reduced by 60%"</span><br>&nbsp;&nbsp;gitlab_cicd_speed: <span class="success-val">"3x deployment frequency acceleration"</span><br>&nbsp;&nbsp;docker_compose_uptime: <span class="success-val">"99.9% availability across 20+ instances"</span><br>&nbsp;&nbsp;ai_data_ingest: <span class="success-val">"Indexed 215,000+ docs (Redis, Memgraph, Qdrant)"</span>` },
+            { type: 'input', text: 'cat character_sheet.yaml' },
+            { type: 'output', text: `---<br><span class="highlight-val">hero:</span><br>&nbsp;&nbsp;name: Amry Yahya<br>&nbsp;&nbsp;class: DevOps Engineer<br>&nbsp;&nbsp;realm: Yogyakarta, Indonesia<br><span class="highlight-val">key_skills:</span><br>&nbsp;&nbsp;ansible_autocast: <span class="success-val">"Server setup time reduced by 60%"</span><br>&nbsp;&nbsp;gitlab_cicd_swift: <span class="success-val">"3x deployment frequency acceleration"</span><br>&nbsp;&nbsp;docker_ward: <span class="success-val">"99.9% availability across 20+ instances"</span><br>&nbsp;&nbsp;ai_arcane_ingest: <span class="success-val">"Indexed 215,000+ docs (Redis, Memgraph, Qdrant)"</span>` },
             { type: 'wait', ms: 800 },
             
-            { type: 'input', text: 'ansible-playbook check_infra.yml' },
-            { type: 'output', text: `PLAY [Check DevOps Environment Health] *****************************************<br><br>TASK [Gathering Facts] *********************************************************<br>ok: [dsi-prod-01]<br><br>TASK [Check Nginx & SSL Certificate Pinning] ***********************************<br>ok: [dsi-prod-01] => {"ssl_status": "Valid", "mitm_protection": "Enabled"}<br><br>TASK [Verify Telegram Alerting via Uptime Kuma] ********************************<br>ok: [dsi-prod-01] => {"status": "ONLINE", "monitored_containers": 20}<br><br>PLAY RECAP *********************************************************************<br>dsi-prod-01 : ok=3 changed=0 unreachable=0 failed=0` },
+            { type: 'input', text: 'cast detection_of_infrastructure_sickness' },
+            { type: 'output', text: `You cast the 🛡️ Infrastructure Ward spell.<br><br>[Ward Integrity Check]<br>✓ Nginx & SSL Certificate Pinning: <span class="success-val">"Valid" — MITM Protection: Enabled</span><br>✓ Telegram familiars & Uptime Kuma totem: <span class="success-val">"Status: ONLINE, Monitored: 20 containers"</span><br>✓ Docker containers: <span class="success-val">"19/20 healthy, 1 regenerating"</span><br><br>All wards hold firm. The realm prospers.` },
             { type: 'wait', ms: 1000 },
             
             { type: 'input', text: 'echo "Infrastructure automated and operational."' },
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         const prompt = document.createElement('span');
                         prompt.className = 'term-prompt';
-                        prompt.textContent = 'guest@amryyahya:~$ ';
+                        prompt.textContent = '➤ ';
                         line.appendChild(prompt);
                         
                         const cmdText = document.createElement('span');
